@@ -1,7 +1,7 @@
 #-*-encoding:utf-8-*-
 
 #%% IMPORT STATEMENTS
-from pyphs import Core as cr
+from pyphs import Core
 
 #%% Creating model
 label = 'vocalApparatus'
