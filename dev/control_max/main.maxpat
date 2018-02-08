@@ -11,7 +11,7 @@
 ,
 		"rect" : [ 87.0, 78.0, 1002.0, 857.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 1,
+		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -38,132 +38,88 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-8",
+					"id" : "obj-15",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 14.0, 260.0, 244.0, 33.0 ],
+					"style" : "",
+					"text" : "Interpolate between canonical values of: central frenquecy, bandwidth and amplitude"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 20.0,
+					"id" : "obj-11",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 14.0, 215.0, 244.0, 51.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 29.0, 25.0, 244.0, 51.0 ],
+					"style" : "",
+					"text" : "FORMANTS INTERPOLATION"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 564.0, 260.0, 29.5, 22.0 ],
+					"patching_rect" : [ 147.0, 347.5, 30.0, 76.0 ],
 					"style" : "",
-					"text" : "6"
+					"text" : "0. 0. -5. -7. -24."
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
+					"id" : "obj-13",
+					"linecount" : 5,
+					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 564.0, 228.0, 63.0, 22.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 76.0, 347.5, 29.0, 76.0 ],
 					"style" : "",
-					"text" : "delay 100"
+					"text" : "13. 13. 40. 60. 40."
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-9",
-					"linecount" : 4,
+					"id" : "obj-10",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 564.0, 330.0, 150.0, 60.0 ],
+					"patching_rect" : [ 14.0, 431.5, 194.0, 47.0 ],
 					"style" : "",
-					"text" : "On pourra enlever quand in saura quelle est la longueur de la liste à générer"
+					"text" : "5x frequencies\n5x bandwidths\n5x amplitudes"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 564.0, 297.0, 100.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 605.0, 268.0, 91.0, 22.0 ],
-					"style" : "",
-					"text" : "send listLength"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"id" : "obj-14",
+					"linecount" : 5,
+					"maxclass" : "message",
+					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 564.0, 189.0, 60.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 605.0, 219.0, 72.0, 22.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 14.0, 347.5, 50.0, 76.0 ],
 					"style" : "",
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 564.0, 159.0, 150.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 564.0, 159.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "list's orders"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-35",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 302.0, 64.0, 150.0, 33.0 ],
-					"style" : "",
-					"text" : "3. Select the source input (1 or 2)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-74",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 301.0, 39.0, 150.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 354.0, 59.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "2. Start residual"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-71",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 301.0, 5.0, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 351.5, 19.0, 150.0, 33.0 ],
-					"style" : "",
-					"text" : "1. Need to connect the tablet before"
+					"text" : "700. 1200. 2500. 2800. 3600."
 				}
 
 			}
@@ -175,7 +131,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 39.0, 150.0, 20.0 ],
+					"patching_rect" : [ 14.0, 34.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.0, 39.0, 150.0, 20.0 ],
 					"style" : "",
@@ -202,10 +158,10 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.609879, 0.819957, 0.037555, 1.0 ],
-					"fontface" : 1,
+					"color" : [ 0.305882, 0.560784, 0.529412, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Calibri",
-					"fontsize" : 20.0,
+					"fontsize" : 16.0,
 					"id" : "obj-37",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -568,9 +524,9 @@
  ]
 					}
 ,
-					"patching_rect" : [ 10.0, 69.0, 256.0, 28.0 ],
+					"patching_rect" : [ 10.0, 69.0, 181.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 69.0, 256.0, 28.0 ],
+					"presentation_rect" : [ 10.0, 69.0, 195.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -587,34 +543,35 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.501961, 0.0, 1.0, 1.0 ],
-					"fontface" : 1,
+					"fontface" : 0,
 					"fontname" : "Arial",
-					"fontsize" : 20.0,
+					"fontsize" : 16.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 10.0, 214.0, 107.0, 31.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 14.0, 302.0, 134.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 358.5, 240.75, 107.0, 31.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 10.0, 204.75, 99.0, 44.0 ],
 					"style" : "",
-					"text" : "LSFinterp"
+					"text" : "formants_interp"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.373433, 0.140743, 0.682415, 1.0 ],
+					"color" : [ 0.305882, 0.560784, 0.529412, 1.0 ],
 					"fontname" : "Calibri Bold",
-					"fontsize" : 20.0,
+					"fontsize" : 16.0,
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 152.0, 140.0, 28.0 ],
+					"patching_rect" : [ 10.0, 152.0, 114.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 152.0, 140.0, 28.0 ],
+					"presentation_rect" : [ 10.0, 152.0, 114.0, 24.0 ],
 					"style" : "",
 					"text" : "VowelMapping"
 				}
@@ -622,16 +579,16 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.459731, 0.806452, 1.0 ],
+					"color" : [ 0.305882, 0.560784, 0.529412, 1.0 ],
 					"fontname" : "Calibri Bold",
-					"fontsize" : 20.0,
+					"fontsize" : 16.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 113.0, 256.0, 28.0 ],
+					"patching_rect" : [ 10.0, 113.0, 195.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 113.0, 256.0, 28.0 ],
+					"presentation_rect" : [ 10.0, 113.0, 211.0, 24.0 ],
 					"style" : "",
 					"text" : "Control"
 				}
@@ -639,14 +596,33 @@
 			}
 , 			{
 				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.952941, 0.564706, 0.098039, 0.64 ],
+					"id" : "obj-5",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 6.0, 207.0, 260.0, 277.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.0, 207.0, 260.0, 277.0 ],
+					"proportion" : 0.39,
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"angle" : 0.0,
+					"background" : 1,
 					"bgcolor" : [ 0.4, 0.803944, 1.0, 0.53707 ],
 					"id" : "obj-42",
 					"maxclass" : "panel",
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 5.0, 285.0, 187.5 ],
+					"patching_rect" : [ 6.0, 5.0, 260.0, 191.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 5.0, 285.0, 187.5 ],
 					"proportion" : 0.39,
@@ -657,15 +633,29 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-13", 1 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 1 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
+					"source" : [ "obj-1", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
-					"midpoints" : [ 256.5, 100.0, 256.5, 100.0 ],
+					"midpoints" : [ 181.5, 100.0, 195.5, 100.0 ],
 					"source" : [ "obj-37", 1 ]
 				}
 
@@ -675,20 +665,6 @@
 					"destination" : [ "obj-2", 0 ],
 					"midpoints" : [ 19.5, 100.0, 19.5, 100.0 ],
 					"source" : [ "obj-37", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-8", 0 ]
 				}
 
 			}
@@ -764,7 +740,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "LSFinterp.maxpat",
+				"name" : "formants_interp.maxpat",
 				"bootpath" : "~/git/vocal-phs/dev/control_max",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -793,6 +769,27 @@
 			}
 , 			{
 				"name" : "vowelAreas.maxpat",
+				"bootpath" : "~/git/vocal-phs/dev/control_max",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "loadRules.maxpat",
+				"bootpath" : "~/git/vocal-phs/dev/control_max",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Formant_Tenor1.txt",
+				"bootpath" : "~/git/vocal-phs/dev/control_max",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "selectFormantParameters.maxpat",
 				"bootpath" : "~/git/vocal-phs/dev/control_max",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
