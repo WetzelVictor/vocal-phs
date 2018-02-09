@@ -1,12 +1,12 @@
 #-*-encoding:utf-8-*-
-
+import pyphs
 from pyphs import Core
 import os
 from pyphs import signalgenerator
 
 #%%
 # Main system
-label = 'vocal fold'
+label = 'vocal_fold'
 core = Core(label)
 
 #%% Adding storage components
@@ -17,7 +17,7 @@ Hm = pii**2/(2.*m)
 core.add_storages(pii,Hm)
 
 # Spring
-xk, k = core.symbols([ 'xi_i','k' ])
+xk, k = core.symbols(['xi_i','k' ])
 Hk = k*xk**2/2.
 core.add_storages(xk, Hk)
 
@@ -33,7 +33,7 @@ core.add_dissipations(wa, za)
 
 #%% Adding ports
 f_I,v_O = core.symbols(['f_I','v_O'])
-core.add_ports(f_I, v_O)
+core.add_ports(-f_I, v_O)
 
 
 #%% Add connections
@@ -94,3 +94,12 @@ simu.init(u=f(), nt=nt)     # initialize `Data` object
 simu.process()
 
 simu.data.plot_powerbal()
+
+#%% LATEX DOCUMENT
+# Add PHS core to LaTeX content
+content = pyphs.core2tex(core)
+
+# Write ready-to-use .tex document
+pyphs.texdocument(content,
+                title='DLC',
+                path='latex/dlc.tex')
